@@ -17,6 +17,6 @@ test:
 
 production:
   <<: *default
-  database: render_deploy_test
-  username: render_deploy_test
+  database: render_deploy_test_eozh
+  username: render_deploy_test_eozh_user
   password: <%= ENV['EVENT_TRACKER_DATABASE_PASSWORD'] %>
