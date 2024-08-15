@@ -1,7 +1,5 @@
 databases:
-  - name: render_deploy_test
-    databaseName: render_deploy_test
-    user: render_deploy_test
+  - name: render_deploy_test 
     plan: free
 
 services:
