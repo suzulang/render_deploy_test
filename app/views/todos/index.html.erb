@@ -1,0 +1,18 @@
+<h1>Todo List</h1>
+
+<%= form_with(model: @todo, local: true) do |f| %>
+  <%= f.text_field :title, placeholder: "Enter a new todo" %>
+  <%= f.submit "Add Todo" %>
+<% end %>
+
+<ul>
+  <% @todos.each do |todo| %>
+    <li>
+      <%= form_with(model: todo, local: true) do |f| %>
+        <%= f.check_box :completed, onchange: 'this.form.submit()' %>
+        <%= todo.title %>
+      <% end %>
+      <%= button_to "Delete", todo_path(todo), method: :delete %>
+    </li>
+  <% end %>
+</ul>
